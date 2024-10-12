@@ -1,0 +1,338 @@
+/*
+Citation for the start up code for CSS styling
+    Date: 7/21/2023
+    URL: https://canvas.oregonstate.edu/courses/1914615/pages/exploration-css-methods?module_item_id=23038356 */
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=EB+Garamond:wght@400;500&display=swap');
+
+  
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+/*   ----- Variables  -----  */
+:root {
+    --custom-color-name:#1D3640;
+    --custom-color-name:#b8dfee;
+    --custom-color-name:#9cc9b4;
+    --custom-color-name:#F2F2F2;
+    --custom-color-name:#eaf2ee;
+    --custom-color-name:rgb(48, 79, 79);
+    --custom-color-name:rgb(240, 240, 236);
+    --custom-embellishment-name:#1b4150;
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    
+    background-position: center;
+    background-size: cover;
+    background-color:#b8dfee;
+    color:#1D3640;
+    font-family: 'EB Garamond', serif; /* Define with at least one font name and its related generic family name.*/
+    font-size:1.2em;
+    line-height:1.2;
+    margin:5%;
+    padding:3%;
+    max-width: 1200px;
+    
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header, footer {
+    background-color:#9cc9b4;
+    padding:1%;
+    margin:1%;
+    color:#d5f1ec;
+    text-align:center;
+    border:2px solid rgb(48, 79, 79);
+    
+}
+  main {text-align: justify;
+    padding:1%;
+    margin:1%;
+    color:#1D3640;
+    border:2px solid rgb(48, 79, 79);
+    background-color: #eaf2ee;
+    
+    }
+  .highlight {
+        background-color: #eaf2ee;
+        width: fit-content;
+        
+    }
+    section { 
+        margin:1%;
+  padding:1%;
+
+      }
+      article {
+        margin:1%;
+        padding:1%;
+        border-top: 2.5px groove rgb(240, 240, 236,0.8);
+        border-bottom:2.5px groove rgb(240, 240, 236,0.8) ;
+        
+        border-right: 6px groove rgb(240, 240, 236,0.8);
+       
+        border-left: 6px groove rgb(240, 240, 236,0.8);
+        }
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+ 
+  
+  /* ----- Anchors ----- Text links */
+  
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    text-align:center;
+    margin:10% 3 10% 3;
+    padding:50;
+    
+  }
+  
+  nav a {
+    font-family: 'EB Garamond', serif;
+    background-color:#1D3640;
+    border:2px solid #1D3640;
+    border-radius:4px 4px 4px 4px; 
+    color:#c3eee7;
+    font-size:1.1em;
+    font-weight:bold;
+    margin:0;
+    padding: 5px 15px 7px 15px;
+    vertical-align: middle;
+    text-decoration:none;
+  }
+  nav a:hover {
+    background-color:#c3eee7;
+    color:rgb(169, 36, 36);
+  }
+  
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family: 'Lobster', cursive;} 
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    font-family: 'EB Garamond', serif;
+    
+    font-size: 90%;
+    color:#0d6540;
+    padding:0.3%;
+    margin:1%;
+    border:2px solid rgb(48, 79, 79);
+  max-width: 99%;
+min-width: 400px;}
+  .column {
+      
+      width: 100%;
+      padding: 50px;
+      margin: 10px;
+    }
+    
+    /* Clearfix (clear floats) */
+  .row::after {
+    text-align:center;
+    width: 100%;
+      padding: 50px;
+      margin: 10px;
+      
+      
+      
+    }
+  caption {font-size: 120%;
+    color:#0b3a25;
+  border-bottom: 2px solid var(--navy);}
+  table.center {
+    margin-left:auto; 
+    margin-right:auto;
+    text-align:center;
+    
+  }
+  body {text-align:center;}
+  thead {
+    text-align:center;
+    border-bottom: 2px solid var(--navy);
+    background-color:#b6f4da;
+    margin-left:auto; 
+    margin-right:auto;
+  }
+  tbody {
+    text-align:center;
+    background-color:rgb(213, 232, 240);
+  }
+  tfoot {}
+  tr th,
+  tr td {
+    text-align:center;
+    border-bottom: 2px solid var(--navy);
+    padding:0.5%;
+    margin:1.5%;
+  text-align: left;
+}
+    tr:nth-child(even) td {background-color:rgb(242, 213, 230);}
+  
+    td:nth-child(odd) td {background-color:rgb(191, 35, 128);}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {
+    }
+  fieldset {padding:1%;
+    margin:1%;
+    color:#1D3640;
+    border:2px solid rgb(48, 79, 79);
+    background-color: #eaf2ee;}
+    legend {color:#ce1b41;
+    font-size: 120%;}
+  label {color:#0d6540;
+    }
+  .single{color:#0d6540;}
+  button {font-family: 'EB Garamond', serif;
+      background-color: #bff6d6;
+      font-size: 90%;
+      color:#0d6540;
+      padding:0.3%;
+      margin:1%;
+      border:2px solid rgb(48, 79, 79);
+  }
+    input {font-family: 'EB Garamond', serif;
+      color:#3f14be;
+      }
+    :focus{border:2px solid rgb(48, 79, 79);
+      background-color: honeydew;
+      color:#771bce;
+    }
+    ::placeholder{
+      color:#771bce;
+    }
+    :required{border:2px solid rgb(152, 10, 10);}
+    label.required:after{
+      content:" *";
+      color:red}
+
+      
+    output {}
+    meter {}
+    progress {}
+    select {font-family: 'EB Garamond', serif;
+      color:#771bce;
+      font-size: 80%;
+      padding:0.3%;
+    }
+      optgroup {}
+      option {}
+    textarea {font-family: 'EB Garamond', serif;
+      color:#3f14be;}
+  
+  /* ----- Media ----- */
+  
+    figcaption {
+        }
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {}
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  
